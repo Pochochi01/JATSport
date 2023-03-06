@@ -1,0 +1,48 @@
+[
+    {
+        "id": "Balon-01",
+        "nombre": "Balon Medicinal 3kg",
+        "categoria": {
+            "id": "Balon",
+            "nombre": "Balon Medicinal"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Balon-02",
+        "nombre": "Balon Medicinal 6kg",
+        "categoria": {
+            "id": "Balon",
+            "nombre": "Balon Medicinal"
+        },
+        "precio": 1200
+    },
+    {
+        "id": "Balon-03",
+        "nombre": "Balon Medicinal 9kg",
+        "categoria": {
+            "id": "Balon",
+            "nombre": "Balon Medicinal"
+        },
+        "precio": 1400
+    },
+    {
+        "id": "Balon-04",
+        "nombre": "Balon Medicinal 12kg",
+        "categoria": {
+            "id": "Balon",
+            "nombre": "Balon Medicinal"
+        },
+        "precio": 1600
+    },
+    {
+        "id": "Escalera-04",
+        "nombre": "Cuadrado 3",
+        "categoria": {
+            "id": "Escalera",
+            "nombre": "Escaleras"
+        },
+        "precio": 1600
+    }
+]
+   
