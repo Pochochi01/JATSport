@@ -1,0 +1,41 @@
+[
+    {
+        "id":"01",
+        "name":"Product A",
+        "description":"description Product A",
+        "stock": 5,
+        "categoria":"Categoria A"
+    },
+
+    {
+        "id":"02",
+        "name":"Product B",
+        "description":"description Product B",
+        "stock": 6,
+        "categoria":"Categoria B"
+    },
+
+    {
+        "id":"03",
+        "name":"Product C",
+        "description":"description Product C",
+        "stock": 7,
+        "categoria":"Categoria A"
+    },
+
+    {
+        "id":"04",
+        "name":"Product D",
+        "description":"description Product D",
+        "stock": 8,
+        "categoria":"Categoria B"
+    },
+
+    {
+        "id":"05",
+        "name":"Product E",
+        "description":"description Product E",
+        "stock": 9,
+        "categoria":"Categoria C"
+    }
+]
