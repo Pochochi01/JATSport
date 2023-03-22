@@ -15,6 +15,7 @@ return(
             name={items.name}
             description={items.description}
             stock={items.stock}
+            image={items.image}
         />
     )
     )
