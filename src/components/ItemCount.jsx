@@ -16,6 +16,7 @@ const ItemCount = () => {
   return (
     <>
     <button onClick={() => setContador(contador+1)}>Sumar</button>
+    {contador}
     <button onClick={(restar)}>Restar</button>
     </>
   )

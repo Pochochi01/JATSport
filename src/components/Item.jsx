@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Item = ({id, name, description, stock}) => {
   
   return (
+    <div key={id}>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
@@ -18,7 +19,8 @@ const Item = ({id, name, description, stock}) => {
           </Button>
       </Card.Body>
     </Card>
-  );
+  </div>
+  ); 
 }
 
 export default Item

@@ -4,7 +4,8 @@
         "name":"Product A",
         "description":"description Product A",
         "stock": 5,
-        "categoria":"Categoria A"
+        "categoria":"Categoria A",
+        "price":10
     },
 
     {
@@ -12,7 +13,8 @@
         "name":"Product B",
         "description":"description Product B",
         "stock": 6,
-        "categoria":"Categoria B"
+        "categoria":"Categoria B",
+        "price":20
     },
 
     {
@@ -20,7 +22,8 @@
         "name":"Product C",
         "description":"description Product C",
         "stock": 7,
-        "categoria":"Categoria A"
+        "categoria":"Categoria A",
+        "price":30
     },
 
     {
@@ -28,7 +31,8 @@
         "name":"Product D",
         "description":"description Product D",
         "stock": 8,
-        "categoria":"Categoria B"
+        "categoria":"Categoria B",
+        "price":40
     },
 
     {
@@ -36,6 +40,7 @@
         "name":"Product E",
         "description":"description Product E",
         "stock": 9,
-        "categoria":"Categoria C"
+        "categoria":"Categoria C",
+        "price":50
     }
 ]
