@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Item from './Item'
 
 
@@ -7,7 +7,8 @@ const ItemList = ({datos}) => {
 return(
     <>
     <Container>
-    {
+        <Row>
+        {
     datos?.map((items)=>(
         <Item 
             key={items.id}
@@ -20,6 +21,7 @@ return(
     )
     )
     }
+    </Row>
     </Container>
 </>
 )

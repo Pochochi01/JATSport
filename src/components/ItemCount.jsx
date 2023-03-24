@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Cards.css'
 
 
 const ItemCount = () => {
@@ -15,9 +16,9 @@ const ItemCount = () => {
 
   return (
     <>
-    <button onClick={() => setContador(contador+1)}>Sumar</button>
-    {contador}
-    <button onClick={(restar)}>Restar</button>
+    <button className="botonSuma" onClick={() => setContador(contador+1)}>+</button>
+    <buttom className="contador">{contador}</buttom>
+    <button className="botonRestar"onClick={(restar)}>-</button>
     </>
   )
 }

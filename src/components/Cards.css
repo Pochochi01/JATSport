@@ -1,3 +1,33 @@
-.cardone:hover{
+.card:hover{
     box-shadow: rgba(255, 255, 255, 0.250);
 }
+
+.botonSuma{
+    width: 30px;
+    
+    border: 0;
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+}
+
+.botonRestar{
+    width: 30px;
+    border: 0;
+    background-color: white;
+    padding: 1rem;
+    color:black;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.contador{
+    width: 40px;
+    background-color: blueviolet;
+    padding: 1.09rem;
+}
+

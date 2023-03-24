@@ -39,8 +39,8 @@ const ItemDetail = () => {
     <>
     {itemFilter.map((dato) => (
         <div key = {dato.id}>
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card className='card text-center bg-light col-md-4' style={{ width: '15rem', height: '25rem' }}>
+      <Card.Img variant="top" src={dato.image} style={{ width: '14.9rem' , height: '15rem'}}/>
       <Card.Body>
         <Card.Title>{dato.name}</Card.Title>
         <Card.Text>
