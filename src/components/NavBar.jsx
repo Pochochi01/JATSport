@@ -10,11 +10,11 @@ const NavBar = () => {
     <>
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">JAT-Sport</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">JAT-Sport</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to ={"/productos"}>Catalogo</Nav.Link>
             <NavDropdown title="Categoria" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to ={`/productos/${"Categoria A"}`}>Categoria A</NavDropdown.Item>

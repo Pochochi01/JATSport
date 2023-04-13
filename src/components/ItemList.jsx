@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Item from './Item'
 
 
-const ItemList = ({datos}) => {
+const ItemList = ({products}) => {
 return(
     <>
     <Container>
         <Row>
         {
-    datos?.map((items)=>(
+    products.map((items)=>(
         <Item 
             key={items.id}
             id={items.id}

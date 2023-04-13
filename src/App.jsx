@@ -3,21 +3,27 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import ItemListContainer from "./components/ItemListContainer"
 import NavBar from "./components/NavBar"
 import ItemDetail from './components/ItemDetailContainer'
-import home from './components/HomeContainer'
+import HomePage from './components/HomePage'
+import CartContext  from './context/CartContext'
+import Cart from './components/Cart'
 
 
 const App = () => {
   
   return (
-    <>      
+    <>
+      <CartContext>
       <BrowserRouter>
         <NavBar />
-          <Routes>            
+          <Routes>
+            <Route exact path='/' element={<HomePage />}/>            
             <Route exact path='/productos' element={<ItemListContainer />}/>
-            <Route exact path='/productos/:category' element={<ItemListContainer />}/>
+            <Route exact path='/productos/:categoria' element={<ItemListContainer />}/>
             <Route exact path='/item/:id' element={<ItemDetail />}/>
+            <Route exact path='/cart' element={<Cart/>}/>
           </Routes> 
       </BrowserRouter>
+      </CartContext>      
     </>
   )
 }

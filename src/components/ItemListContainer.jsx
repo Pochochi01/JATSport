@@ -1,44 +1,35 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
-import datos from './data/data.json'
 import ItemList from './ItemList'
+import { useState, useEffect } from 'react'
+import { collection, getDocs, getFirestore} from 'firebase/firestore'
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({}) => {
 
-const { category } = useParams();
+const { categoria } = useParams();
+const [products, setProducts] =useState([])
 
+useEffect(()=>{
+    const db = getFirestore();
+    const itemsCollection = collection(db, "Products");
+    
+    getDocs(itemsCollection).then((snapshot)=>{
+      const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}));
+      setProducts(docs);
+    })
+  }, [])
+    
       
-  const getDatos = () => {
-    return new Promise((resolve, reject) => {
-        if (datos.lenght === 0) {
-            reject(new Error("Arreglo Vacio"))
-        }
-        setTimeout(()=> {
-            resolve(datos)
-        },2000);
-    });
-};
+  
+const catFilter = products.filter((prod) => prod.categoria === categoria);
 
-async function fetchingData(){
-    try {
-        const datosFetched = await getDatos();
-        console.log(datosFetched);
-    } catch (err) {
-        console.log(err);
-    }
-}
-
-fetchingData();
-
-const filtro = datos.filter((dato) => dato.categoria === category);
 
 return (
 <>
     
-        {category ? <ItemList datos={filtro}/> : <ItemList datos={datos}/>}
+        {categoria? <ItemList products={catFilter}/> : <ItemList products={products}/>}
     
 </>
 )
