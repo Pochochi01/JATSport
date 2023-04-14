@@ -4,7 +4,8 @@ import {Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from '../context/CartContext';
-// import Order from './Order';
+import Contact from './Contact';
+
 
 const Cart = () => {
   const { cart, removeItem, totalCart } = useContext(CartContext);
@@ -37,8 +38,8 @@ const Cart = () => {
               <td><img src={prod.image} alt="" style={{ width: '6rem' }} /> </td>
               <td>{prod.name}</td>
               <td>${prod.price}</td>
-              <td>{prod.buyTotal}</td>
-              <td>${prod.buyTotal * prod.price}</td>
+              <td>{prod.cantidad}</td>
+              <td>${prod.cantidad * prod.price}</td>
             </tr>
           ))}
         </tbody>
@@ -63,7 +64,7 @@ const Cart = () => {
       </Table>
       </div>
 
-      {/* <OrderForm/> */}
+      <Contact/>
 
       </div>
             ):(

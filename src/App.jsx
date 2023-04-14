@@ -6,6 +6,7 @@ import ItemDetail from './components/ItemDetailContainer'
 import HomePage from './components/HomePage'
 import CartContext  from './context/CartContext'
 import Cart from './components/Cart'
+import Contact from './components/Contact'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             <Route exact path='/productos/:categoria' element={<ItemListContainer />}/>
             <Route exact path='/item/:id' element={<ItemDetail />}/>
             <Route exact path='/cart' element={<Cart/>}/>
+            
           </Routes> 
       </BrowserRouter>
       </CartContext>      

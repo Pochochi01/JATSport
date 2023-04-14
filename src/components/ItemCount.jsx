@@ -7,10 +7,10 @@ import { CartContext } from '../context/CartContext';
 
 const ItemCount = ({id,title,price,image,stock}) => {
 // funciones de suma y resta
-const {addToCart, cart, setCart} = useContext (CartContext)
+const {addToCart, cart} = useContext (CartContext)
 const [counter, setCounter] = useState (0);
 const productCart = cart.filter(prod => prod.id === id);
-const productsCart = productCart.length > 0 ? productCart[0].buyTotal : 0;
+const productsCart = productCart.length > 0 ? productCart[0].cantidad : 0;
 
 const sumar = () => {
   if (counter + productsCart < stock) {
@@ -31,7 +31,7 @@ const addProdCart = () => {
       image,
       title,
       price,
-      buyTotal:counter
+      cantidad:counter
   }
   addToCart(prod);
 };
@@ -40,9 +40,9 @@ return (
     <>
       <ButtonToolbar className="justify-content-between" aria-label="Toolbar with Button groups">
         <ButtonGroup style={{ width: '10rem', margin:'2rem' }} aria-label="Basic example" className="justify-content-md-center" >
-          <Button variant="outline-danger" onClick={restar}> - </Button>
-          <Button variant="outline-dark" > {counter} </Button>
-          <Button variant="outline-success" onClick={sumar}> + </Button>
+          <Button variant="primary" onClick={restar}> - </Button>
+          <Button variant="outline-primary" > {counter} </Button>
+          <Button variant="primary" onClick={sumar}> + </Button>
         </ButtonGroup>
       </ButtonToolbar>
       <ButtonToolbar className="justify-content-between" aria-label="Toolbar with Button groups" >

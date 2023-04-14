@@ -11,7 +11,7 @@ const CartWidget = () => {
     return (
       <div >
         <Button variant="outline" size="lg" border="none" >
-        <span className="material-symbols-outlined">
+        <span className="material-symbols-outlined" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           shopping_cart
         </span>
         {cart !=0? (
