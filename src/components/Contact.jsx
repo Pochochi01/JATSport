@@ -2,17 +2,17 @@ import React from 'react'
 import { useState } from 'react';
 import {collection, addDoc, getFirestore} from "firebase/firestore";
 import { useContext } from 'react'
-import { CartContext } from '../context/CartContext';
+import { CartDataContext } from '../context/CartContext';
 
 const Contact = () => {
 
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [orderId, setOrderId] = useState(null);
-    const { cart, totalCart } = useContext(CartContext);
+    const { cart, totalCart } = useContext(CartDataContext);
   
     const db = getFirestore();
-    const ordersCollection = collection(db,"order");
+    const ordersCollection = collection(db,"orders");
   
     const handleSubmit = (e) => {
       e.preventDefault()
@@ -32,8 +32,8 @@ const Contact = () => {
     <form className="form" onSubmit={handleSubmit}>
 
       <header>
-        Completar Compra
-        <span className="message">Llenar el Formulario para confirmar compra.</span>
+        Completar Compra. 
+        <span className="message"> Llenar el Formulario para confirmar compra.</span>
       </header>
 
       <label>

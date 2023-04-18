@@ -20,11 +20,9 @@ const NavBar = () => {
               <NavDropdown.Item as={Link} to ={`/productos/${"Categoria A"}`}>Categoria A</NavDropdown.Item>
               <NavDropdown.Item as={Link} to={`/productos/${"Categoria B"}`}>Categoria B</NavDropdown.Item>
               <NavDropdown.Item as={Link} to={`/productos/${"Categoria C"}`}>Categoria C</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+              <NavDropdown.Item as={Link} to={`/productos/${"Categoria D"}`}>Categoria D</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to={`/productos/${"Categoria E"}`}>Categoria E</NavDropdown.Item>
+             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
         <Nav>

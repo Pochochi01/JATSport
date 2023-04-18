@@ -6,7 +6,7 @@ import ItemDetail from './components/ItemDetailContainer'
 import HomePage from './components/HomePage'
 import CartContext  from './context/CartContext'
 import Cart from './components/Cart'
-import Contact from './components/Contact'
+import "./App.css"
 
 
 const App = () => {

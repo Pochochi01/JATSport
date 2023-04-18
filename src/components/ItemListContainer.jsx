@@ -28,9 +28,9 @@ const catFilter = products.filter((prod) => prod.categoria === categoria);
 
 return (
 <>
-    
+   
         {categoria? <ItemList products={catFilter}/> : <ItemList products={products}/>}
-    
+      
 </>
 )
 }

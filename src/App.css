@@ -1,0 +1,22 @@
+.catalogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin: 3rem;
+    flex-wrap: wrap;
+    gap: 100px;
+    
+  }
+  
+  form{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5rem;
+    margin-left: 30rem;
+  }
+
+  

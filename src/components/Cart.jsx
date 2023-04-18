@@ -3,12 +3,12 @@ import { useContext } from 'react';
 import {Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import { CartContext } from '../context/CartContext';
+import { CartDataContext } from '../context/CartContext';
 import Contact from './Contact';
 
 
 const Cart = () => {
-  const { cart, removeItem, totalCart } = useContext(CartContext);
+  const { cart, removeItem, totalCart } = useContext(CartDataContext);
   return (
     <div>
       {cart.length !== 0 ? (
@@ -27,7 +27,8 @@ const Cart = () => {
         </thead>
         <tbody style={{ verticalAlign: 'middle' }}>
           {cart.map((prod) => (
-            <tr key={prod.id}>
+            <div key={prod.id}>
+            <tr>
               <td>
                 <Button variant="outline-danger" onClick={() => removeItem (prod.id)} >
                 <span className="material-symbols-outlined" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
@@ -41,6 +42,7 @@ const Cart = () => {
               <td>{prod.cantidad}</td>
               <td>${prod.cantidad * prod.price}</td>
             </tr>
+            </div>
           ))}
         </tbody>
       </Table>

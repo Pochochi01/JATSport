@@ -25,7 +25,7 @@ const [loading, setLoading] = useState(false);
       
         <div>  
           <Row className="justify-content-center" >
-            <Card border="warning" style={{ width: '25rem', margin:'3rem',paddingTop:'1rem' }} >
+            <Card border="primary" style={{ width: '15rem', height: '30rem', margin:'1rem',paddingTop:'1rem' }} >
             <Card.Img variant="top" src= {products.image} />
 
                 <Stack>
@@ -45,7 +45,7 @@ const [loading, setLoading] = useState(false);
                     </Card.Text>
                   </Card.Body>
 
-                  <Card.Footer>
+                  <Card.Footer className="justify-content-center">
                     <ItemCount id={products.id}
                       name={products.name}
                       price={products.price}
