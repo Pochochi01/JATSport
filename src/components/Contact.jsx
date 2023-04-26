@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import {collection, addDoc, getFirestore} from "firebase/firestore";
 import { useContext } from 'react'
-import { CartDataContext } from '../context/CartContext';
+import { CartContext } from '../context/CartContext';
 
 const Contact = () => {
 
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [orderId, setOrderId] = useState(null);
-    const { cart, totalCart } = useContext(CartDataContext);
+    const { cart, totalCart } = useContext(CartContext);
   
     const db = getFirestore();
     const ordersCollection = collection(db,"orders");

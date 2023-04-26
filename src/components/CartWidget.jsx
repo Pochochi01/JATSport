@@ -1,10 +1,10 @@
 import React from 'react'
-import { CartDataContext } from '../context/CartContext';
+import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 
 const CartWidget = () => {
-  const {cart, setCart}= useContext(CartDataContext);
+  const {cart, setCart}= useContext(CartContext);
 
   const cantidad = cart.reduce((acc, curr) =>{return acc + curr.cantidad}, 0)
   

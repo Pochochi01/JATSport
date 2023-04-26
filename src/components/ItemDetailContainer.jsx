@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
 
   useEffect(()=>{
     const db = getFirestore();
-    const oneItem = doc(db, "Products", id );
+    const oneItem = doc(db, "Products", `${id}` );
     getDoc(oneItem).then((snapshot)=>{
       if (snapshot.exists()){
         const docs = snapshot.data();
@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
   
   return (
     <>
-    <ItemDetail products={products}/>
+    <ItemDetail products={products} id={id}/>
     </>
   )
 }

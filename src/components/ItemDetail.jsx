@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import { Spinner, Stack } from 'react-bootstrap';
 
 
-const ItemDetail = ({ products }) => {
+const ItemDetail = ({ products, id }) => {
   
 
 const [loading, setLoading] = useState(false);
@@ -25,7 +25,7 @@ const [loading, setLoading] = useState(false);
       
         <div>  
           <Row className="justify-content-center" >
-            <Card border="primary" style={{ width: '15rem', height: '30rem', margin:'1rem',paddingTop:'1rem' }} >
+            <Card border="primary" style={{ width: '15rem', height: '30rem', margin:'1rem',paddingTop:'1rem' }} key={id}>
             <Card.Img variant="top" src= {products.image} />
 
                 <Stack>

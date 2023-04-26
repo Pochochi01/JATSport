@@ -1,37 +1,32 @@
 import {createContext, useState, useEffect} from 'react';
 
-export const CartDataContext = createContext();
+export const CartContext = createContext();
 
 
-const CartContext = ({children}) => {
-// local storage para guardar cart
-const [cart, setCart] = useState(() => {
-  const savedCart = JSON.parse(localStorage.getItem("cart"));
-  return savedCart || [];
-});
+const cartContext = ({children}) => {
+const [cart, setCart] = useState([]);
 
 
-useEffect(() => {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}, [cart]);
+// const addToCart = (prod) => {
+//   const prodInCart = cart.find((item) => item.id === prod.id);
+//   // console.log(prodInCart)
+//   if (prodInCart) {
+//     const updatedCart = cart.map((item) =>
+//       item.id === prod.id ? { ...item, cantidad: item.cantidad + prod.cantidad} : item);
+//     setCart(updatedCart);
+//   } else {
+//     setCart([...cart,prod])
+//   }
+// };
 
-const addToCart = (prod) => {
-  // function para que los items se sumen y no se repitan
-  const prodInCart = cart.find((item) => item.id === prod.id);
-  console.log(prodInCart)
-  if (prodInCart) {
-    const updatedCart = cart.map((item) =>
-      item.id === prod.id ? { ...item, cantidad: item.cantidad + prod.cantidad} : item
-    );
-    setCart(updatedCart);
-  } else {
-    setCart([...cart,prod])
-  }
-};
+    const addToCart = (prod) => {
+     setCart([...cart, prod]);
+    }
 
 
-    const removeItem = (prodId)=>{
-      const deleteItem = cart.filter(prod => prod.id !== prodId);
+    const removeItem = (prod)=>{
+      console.log(prod)
+      const deleteItem = cart.filter(prod => prod.id !== prod);
       setCart(deleteItem);
     }
 
@@ -44,10 +39,10 @@ const addToCart = (prod) => {
 
   
   return (
-    <CartDataContext.Provider value={{cart, removeItem, totalCart, nullCart, addToCart, setCart}}>
+    <CartContext.Provider value={{cart, removeItem, totalCart, nullCart, addToCart, setCart}}>
         {children}
-        </CartDataContext.Provider>
+        </CartContext.Provider>
   )
 }
 
-export default CartContext
+export default cartContext

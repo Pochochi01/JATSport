@@ -3,11 +3,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import { Link } from "react-router-dom";
 import { useState,useContext } from 'react';
-import { CartDataContext } from '../context/CartContext';
+import { CartContext } from '../context/CartContext';
 
-const ItemCount = ({id,title,price,image,stock}) => {
+const ItemCount = ({id,title,price,image,stock,name}) => {
 // funciones de suma y resta
-const {addToCart, cart} = useContext (CartDataContext)
+const {addToCart, cart} = useContext (CartContext)
 const [counter, setCounter] = useState (0);
 const productCart = cart.filter(prod => prod.id === id);
 const productsCart = productCart.length > 0 ? productCart[0].cantidad : 0;
@@ -33,6 +33,7 @@ const addProdCart = () => {
   const prod = {
       id,
       image,
+      name,
       title,
       price,
       cantidad:counter
