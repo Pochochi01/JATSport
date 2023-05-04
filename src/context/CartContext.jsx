@@ -24,9 +24,8 @@ const [cart, setCart] = useState([]);
     }
 
 
-    const removeItem = (prod)=>{
-      console.log(prod)
-      const deleteItem = cart.filter(prod => prod.id !== prod);
+    const removeItem = (prodId)=>{      
+      const deleteItem = cart.filter(prodT => prodT.id === prodId);
       setCart(deleteItem);
     }
 

@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 import { useState,useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-const ItemCount = ({id,title,price,image,stock,name}) => {
+const ItemCount = ({id,price,image,stock,name}) => {
+console.log(id);
+
 // funciones de suma y resta
 const {addToCart, cart} = useContext (CartContext)
 const [counter, setCounter] = useState (0);
 const productCart = cart.filter(prod => prod.id === id);
+console.log(productCart)
 const productsCart = productCart.length > 0 ? productCart[0].cantidad : 0;
 
 const sumar = () => {
@@ -34,7 +37,6 @@ const addProdCart = () => {
       id,
       image,
       name,
-      title,
       price,
       cantidad:counter
   }

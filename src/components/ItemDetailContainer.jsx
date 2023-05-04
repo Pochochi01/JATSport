@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const [products, setProducts] =useState([]);
 
   useEffect(()=>{
@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
   
   return (
     <>
-    <ItemDetail products={products} id={id}/>
+    <ItemDetail products={products} id={products.id}/>
     </>
   )
 }

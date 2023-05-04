@@ -8,7 +8,7 @@ import Contact from './Contact';
 
 
 const Cart = () => {
-  const { cart, removeItem, totalCart } = useContext(CartContext);
+  const { cart, removeItem, totalCart, nullCart } = useContext(CartContext);
   
   return (
     <div>
@@ -18,8 +18,7 @@ const Cart = () => {
       <Table responsive hover style={{ boxSizing: 'inherit', textAlign: 'left', marginTop:'3rem' }}>
         <thead>
           <tr>
-            <th></th>
-            <th></th>
+            <th>Eliminar</th>
             <th>Producto</th>
             <th>Precio</th>
             <th>Cantidad</th>
@@ -36,14 +35,23 @@ const Cart = () => {
                 </span>
                 </Button>
               </td>
-              <td><img src={prod.image} alt="" style={{ width: '6rem' }} /> </td>
+              {/* <td><img src={prod.image} alt="" style={{ height:'5rem', width: '5rem' }} /> </td> */}
               <td>{prod.name}</td>
               <td>${prod.price}</td>
               <td>{prod.cantidad}</td>
               <td>${prod.cantidad * prod.price}</td>
+              <td></td>
+              
             </tr>
           ))}
         </tbody>
+        <td>
+                <Button variant="outline-danger" onClick={() => nullCart()} >
+                <span className="material-symbols-outlined" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
+                  
+                </span>Limpiar Carrito
+                </Button>
+              </td>
       </Table>
       </div>
 
@@ -71,7 +79,7 @@ const Cart = () => {
             ):(
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop:'2rem'}}>
                 <h3>El Carrito Esta Vacio</h3>
-                <Button variant="outline-primary" size="lg" as={Link} to="/">Volver al Catalogo</Button>
+                <Button variant="outline-primary" size="lg" as={Link} to="/productos">Volver al Catalogo</Button>
               </div>
             )}
     </div>
