@@ -10,7 +10,7 @@ console.log(id);
 
 // funciones de suma y resta
 const {addToCart, cart} = useContext (CartContext)
-const [counter, setCounter] = useState (0);
+const [counter, setCounter] = useState (1);
 const productCart = cart.filter(prod => prod.id === id);
 console.log(productCart)
 const productsCart = productCart.length > 0 ? productCart[0].cantidad : 0;
