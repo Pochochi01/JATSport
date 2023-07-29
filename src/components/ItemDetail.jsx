@@ -6,9 +6,9 @@ import Row from 'react-bootstrap/Row';
 import { Spinner, Stack } from 'react-bootstrap';
 
 
-const ItemDetail = ({ products, id }) => {
+const ItemDetail = ({ products, id1 }) => {
   
-
+console.log(id1);
 const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const [loading, setLoading] = useState(false);
       
         <div>  
           <Row className="justify-content-center" >
-            <Card border="primary" style={{ width: '15rem', height: '30rem', margin:'1rem',paddingTop:'1rem' }} key={id}>
+            <Card border="primary" style={{ width: '15rem', height: '30rem', margin:'1rem',paddingTop:'1rem' }} key={id1}>
             <Card.Img variant="top" src= {products.image} />
 
                 <Stack>
@@ -46,7 +46,7 @@ const [loading, setLoading] = useState(false);
                   </Card.Body>
 
                   <Card.Footer className="justify-content-center">
-                    <ItemCount id={products.id}
+                    <ItemCount id={id1}
                       name={products.name}
                       price={products.price}
                       stock={products.stock} />

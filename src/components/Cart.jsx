@@ -73,7 +73,10 @@ const Cart = () => {
       </Table>
       </div>
 
-      <Contact/>
+      <div>
+            <Button  variant="outline-primary" size="lg" as={Link} to="/contact">"Finalizar Compra"</Button>
+      </div>
+      
 
       </div>
             ):(

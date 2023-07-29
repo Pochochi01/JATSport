@@ -7,6 +7,7 @@ import HomePage from './components/HomePage'
 import CartContext  from './context/CartContext'
 import Cart from './components/Cart'
 import "./App.css"
+import Contact from './components/Contact'
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path='/productos/:categoria' element={<ItemListContainer />}/>
             <Route exact path='/item/:id' element={<ItemDetail />}/>
             <Route exact path='/cart' element={<Cart/>}/>
+            <Route exact path='/contact' element={<Contact/>}/>
             
           </Routes> 
       </BrowserRouter>

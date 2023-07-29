@@ -7,10 +7,11 @@ import {doc, getDoc, getFirestore} from "firebase/firestore"
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [products, setProducts] =useState([]);
+  console.log(products);
 
   useEffect(()=>{
     const db = getFirestore();
-    const oneItem = doc(db, "Products", `${id}` );
+    const oneItem = doc(db, "Products",`${id}`);
     getDoc(oneItem).then((snapshot)=>{
       if (snapshot.exists()){
         const docs = snapshot.data();
@@ -21,7 +22,7 @@ const ItemDetailContainer = () => {
   
   return (
     <>
-    <ItemDetail products={products} id={products.id}/>
+    <ItemDetail products={products} id1={id}/>
     </>
   )
 }
